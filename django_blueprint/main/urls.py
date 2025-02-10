@@ -10,7 +10,7 @@ router.register(r"tasks", views.TaskAPIViewSet)
 
 urlpatterns = [
     path("api/v1/signup/", SignupView.as_view(), name="signup"),
-    path("login/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path("login/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path("api/v1/login/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/v1/login/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/v1/", include(router.urls)),
 ]
